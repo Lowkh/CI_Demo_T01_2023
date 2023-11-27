@@ -14,3 +14,11 @@ jobs:
       run: |
         ls
         echo Hello there!
+    - name: Checkout private repo
+      uses: actions/checkout@v4
+      with:
+        repository: lowkh/hiddenWeek7
+        token: ${{ secrets.WEEK7 }} 
+    - name: List contents
+      run: |
+        ls
