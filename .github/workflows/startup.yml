@@ -16,21 +16,23 @@ jobs:
     - name: install plugin
       run: |
         pip install pytest pytest-cov
+        mkdir tempFolder
     - name: checkout my codes
       uses: actions/checkout@v4
       with:
         repository: lowkh/CI_Demo_T01_2023
-        path: main
+    
     - name: Checkout private repo
       uses: actions/checkout@v4
       with:
         repository: lowkh/hiddenWeek7
         token: ${{ secrets.WEEK7 }} 
-        path: main
+
     - name: Print and list out content
       run: |
         ls
-        mv *.* /main
+        
+        mv *.* /tempFolder
         cd main
         ls
         pytest --cov
