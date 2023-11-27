@@ -8,6 +8,14 @@ jobs:
     name: Build my Virtual OS
     runs-on: Ubuntu-latest
     steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+
+    - name: install plugin
+      run: |
+        pip install pytest pytest-cov
     - name: checkout my codes
       uses: actions/checkout@v4
       with:
@@ -23,12 +31,4 @@ jobs:
     - name: List contents
       run: |
         ls
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.10' 
-
-    - name: install plugin
-      run: |
-        pip install pytest pytest-cov
         pytest --cov
