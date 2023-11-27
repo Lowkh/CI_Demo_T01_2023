@@ -20,12 +20,13 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: lowkh/CI_Demo_T01_2023
-
+        path: main
     - name: Checkout private repo
       uses: actions/checkout@v4
       with:
         repository: lowkh/hiddenWeek7
         token: ${{ secrets.WEEK7 }} 
+        path: main
     - name: Print and list out content
       run: |
         ls
