@@ -25,7 +25,7 @@ jobs:
     - name: Move files to tempFolder
       run: |
         ls   
-        mv *.* /tempFolder
+        sudo mv *.* /tempFolder
     - name: Checkout private repo
       uses: actions/checkout@v4
       with:
@@ -36,7 +36,7 @@ jobs:
       run: |
         ls
         
-        mv *.* /tempFolder
+        sudo mv *.* /tempFolder
         cd tempFolder
         ls
         pytest --cov
