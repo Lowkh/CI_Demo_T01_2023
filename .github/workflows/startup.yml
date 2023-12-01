@@ -21,7 +21,11 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: lowkh/CI_Demo_T01_2023
-    
+
+    - name: Move files to tempFolder
+      run: |
+        ls   
+        mv *.* /tempFolder
     - name: Checkout private repo
       uses: actions/checkout@v4
       with:
@@ -33,6 +37,6 @@ jobs:
         ls
         
         mv *.* /tempFolder
-        cd main
+        cd tempFolder
         ls
         pytest --cov
