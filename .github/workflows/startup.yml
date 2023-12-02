@@ -2,6 +2,9 @@ name: Simple Start Up
 on:
   push:
     branches: [main]
+
+    tags:
+      - 'v*'
     
 jobs:
   build:
@@ -32,7 +35,10 @@ jobs:
       run: |
         ls
         sudo mv ./hiddenCode/*.* ./
-
+  build2:
+    name: Build my Virtual OS 2
+    runs-on: Ubuntu-latest
+    steps:
     - name: Test Command
       run: |
         pytest -v -cov --junitxml=report.xml
