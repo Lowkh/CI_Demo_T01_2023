@@ -37,6 +37,4 @@ jobs:
     - name: Test Command
       run: |
         pytest -cov --junitxml=report.xml
-
-    - name: Create Issue on Failed workflow
       
