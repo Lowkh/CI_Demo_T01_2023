@@ -17,6 +17,7 @@ jobs:
       run: |
         pip install pytest pytest-cov
         mkdir tempFolder
+        ls
     - name: checkout my codes
       uses: actions/checkout@v4
       with:
