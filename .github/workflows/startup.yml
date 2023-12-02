@@ -38,4 +38,3 @@ jobs:
     - name: Test Command
       run: |
         pytest -cov --junitxml=report.xml
-      
