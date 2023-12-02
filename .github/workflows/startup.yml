@@ -36,7 +36,7 @@ jobs:
         sudo mv ./hiddenCode/*.* ./
     - name: Test Command
       run: |
-        pytest --cov -v
+        pytest -cov --junitxml=report.xml
 
     - name: Create Issue on Failed workflow
       if: ${{ failure() }}
