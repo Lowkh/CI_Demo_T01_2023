@@ -58,3 +58,13 @@ jobs:
       if: always()
       with:
         junit_files: "report.xml"
+        
+  release:
+    needs: build
+    name: Release to Git for delivery
+    runs-on: Ubuntu-latest
+    steps:
+    - name: Create Folder for Packages
+      run: |
+        mkdir downloads
+        ls
