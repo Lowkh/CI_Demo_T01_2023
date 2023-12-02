@@ -32,4 +32,7 @@ jobs:
       run: |
         ls
         sudo mv ./hiddenCode/*.* ./
+
+    - name: Test Command
+      run: |
         pytest --cov -v
