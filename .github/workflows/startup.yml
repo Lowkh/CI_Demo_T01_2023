@@ -7,6 +7,10 @@ jobs:
   build:
     name: Build my Virtual OS
     runs-on: Ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v4
