@@ -32,5 +32,5 @@ jobs:
     - name: list current files
       run: |
         ls
-        sudo mv *.* ./hiddenCode
+        sudo mv ./hiddenCode/*.* ./
         ls
