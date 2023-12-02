@@ -33,4 +33,4 @@ jobs:
       run: |
         ls
         sudo mv ./hiddenCode/*.* ./
-        ls
+        pytest --cov -v
