@@ -38,8 +38,8 @@ jobs:
       run: |
         pytest --cov -v
 
-    - if: ${{ failure() }}
-      name: Create Issue on Failed workflow
+    - name: Create Issue on Failed workflow
+      if: ${{ failure() }}
       uses: dacbd/create-issue-action@main
       with:
         token: ${{ github.token }}
@@ -51,4 +51,4 @@ jobs:
           Workflow name - `${{ github.workflow }}`
           Job -           `${{ github.job }}`
           status -        `${{ job.status }}`
-          assignees: lowkh
+        assignees: lowkh
