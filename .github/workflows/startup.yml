@@ -7,10 +7,6 @@ jobs:
   build:
     name: Build my Virtual OS
     runs-on: Ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      repository-projects: write
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v4
@@ -49,8 +45,8 @@ jobs:
         title: Action workflow failed.
         body: |
           ### Context
-          [Failed Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
-          [Codebase](https://github.com/${{ github.repository }}/tree/${{ github.sha }})
+          # [Failed Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          # [Codebase](https://github.com/${{ github.repository }}/tree/${{ github.sha }})
           Workflow name - `${{ github.workflow }}`
           Job -           `${{ github.job }}`
           status -        `${{ job.status }}`
