@@ -8,6 +8,7 @@ jobs:
     name: Build my Virtual OS
     runs-on: Ubuntu-latest
     steps:
+    - name: Setup Python Environment
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v4
       with:
@@ -17,7 +18,7 @@ jobs:
       run: |
         pip install pytest pytest-cov
 
-    - name: checkout my codes
+    - name: checkout development code
       uses: actions/checkout@v4
       with:
         repository: lowkh/CI_Demo_T01_2023
@@ -29,8 +30,10 @@ jobs:
         token: ${{ secrets.WEEK7 }} 
         path: hiddenCode
 
-    - name: list current files
+    - name: List current files
       run: |
         ls
         sudo mv ./hiddenCode/*.* ./
+    - name: Test Command
+      run: |
         pytest --cov -v
