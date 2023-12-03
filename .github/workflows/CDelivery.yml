@@ -1,8 +1,8 @@
 name: Simple Start Up
 on:
-  pull_request:
+  push:
     tags:
-      - 'v*'
+      - 'Beta*'
     
 jobs:
   Requests_Delivery:
