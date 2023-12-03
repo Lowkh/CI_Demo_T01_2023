@@ -2,7 +2,7 @@ name: Simple Deployment
 on:
   push:
     tags:
-      - 'v*'
+      - v*.
     
 jobs:
   build:
