@@ -65,7 +65,7 @@ jobs:
         name: assetDocuments
         path: downloads        
   release:
-    #needs: build
+    needs: build
     #name: Release to Git for delivery
     runs-on: Ubuntu-latest
     steps:
