@@ -58,16 +58,22 @@ jobs:
       if: always()
       with:
         junit_files: "report.xml"
+
+    - name: Prepare results
+      run: |
+        mkdir downloads
+        mv report.xml ./downloads
         
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with: 
         name: testResults
-        path: ./   
+        path: downloads   
     - name: download remote test results
       uses: actions/download-artifact@v2
       with:
         name: testResults
+
         
   release:
     needs: build
