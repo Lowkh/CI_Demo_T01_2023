@@ -6,7 +6,7 @@ on:
     
 jobs:
   Requests_Delivery:
-    name: Build and Test to Verify
+    name: Build and Test For Delivery
     runs-on: Ubuntu-latest
     steps:
     - uses: actions/checkout@v4
