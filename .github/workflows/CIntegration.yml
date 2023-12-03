@@ -2,7 +2,9 @@ name: Simple Start Up
 on:
   push:
     branches: [main]
- 
+  pull_request:
+    branches: [main]
+    
 jobs:
   build:
     name: Build and Test
@@ -43,7 +45,7 @@ jobs:
       uses: dacbd/create-issue-action@main
       with:
         token: ${{ github.token }}
-        title: Action workflow failed.
+        title: Action workflow Workflow name - `${{ github.workflow }}` failed.
         body: |
           ### Context
           [Failed Run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
