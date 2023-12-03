@@ -1,4 +1,4 @@
-name: Simple Start Up
+name: Simple Delivery
 on:
   push:
     tags:
