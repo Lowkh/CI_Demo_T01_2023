@@ -1,4 +1,4 @@
-name: Simple Start Up
+name: Simple Continuous Integration
 on:
   push:
     branches: [main]
