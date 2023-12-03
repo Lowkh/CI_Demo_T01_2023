@@ -6,7 +6,7 @@ on:
     
 jobs:
   build:
-    name: Build my Virtual OS
+    name: Build and Test for Deployment
     runs-on: Ubuntu-latest
     steps:
     - uses: actions/checkout@v4
