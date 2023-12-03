@@ -1,4 +1,4 @@
-name: Simple Start Up
+name: Simple Deployment
 on:
   push:
     tags:
