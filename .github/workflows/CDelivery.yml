@@ -5,7 +5,7 @@ on:
       - 'v*'
     
 jobs:
-  build:
+  Requests_Delivery:
     name: Build and Test to Verify
     runs-on: Ubuntu-latest
     steps:
@@ -59,9 +59,18 @@ jobs:
       if: always()
       with:
         junit_files: "report.xml"
-
+  Requests_AddReviewer:
+      needs: Requests_Delivery
+      runs-on: ubuntu-latest
+      steps:
+      - name: Add Reviewers
+        uses: madrapps/add-reviewers@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          reviewers: lowkh2
+        
   Delivery_To_Git_Release:
-    needs: build
+    needs: Requests_AddReviewer
     name: Release to Git for delivery
     runs-on: Ubuntu-latest
     steps:
