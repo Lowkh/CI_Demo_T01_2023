@@ -90,8 +90,10 @@ jobs:
       with:
         tag_name: ${{ env.RELEASE_VERSION }}
         release_name: Release ${{env.RELEASE_VERSION }}
-    - name: Archive site content
-      uses: thedoctor0/zip-release@master
+
+    - name: Archive Release
+      uses: thedoctor0/zip-release@0.7.5
       with:
-        filename: content.zip
+        type: 'zip'
+        filename: 'release.zip'
       
