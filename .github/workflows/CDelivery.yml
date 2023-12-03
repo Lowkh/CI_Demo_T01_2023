@@ -2,7 +2,7 @@ name: Simple Delivery
 on:
   push:
     tags:
-      - 'b*.'
+      - 'b*'
     
 jobs:
   Requests_Delivery:
