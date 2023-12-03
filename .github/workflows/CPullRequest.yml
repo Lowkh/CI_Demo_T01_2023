@@ -82,6 +82,6 @@ jobs:
       uses: madrapps/add-reviewers@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        reviewers: lowkh
+        reviewers: lowkh2
 
 
