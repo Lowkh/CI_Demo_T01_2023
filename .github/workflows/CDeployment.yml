@@ -62,7 +62,7 @@ jobs:
 
   Deploy_To_Git_Release:
     needs: build
-    name: Release to Git for delivery
+    name: Release to Git for Deployment
     runs-on: Ubuntu-latest
     steps:
     - name: Set environment version
