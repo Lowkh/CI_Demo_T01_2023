@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  Requests_Build:
     name: Build and Test
     runs-on: Ubuntu-latest
     steps:
@@ -74,8 +74,8 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: testResults
-  requests:
-    needs: build
+  Requests_AddReviewer:
+    needs: Requests_Build
     runs-on: ubuntu-latest
     steps:
     - name: Add Reviewers
