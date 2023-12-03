@@ -68,3 +68,9 @@ jobs:
       run: |
         mkdir downloads
         ls
+    - name: move files
+      run: |
+        mv *.xml ./downloads
+        cd downloads 
+        ls
+      
